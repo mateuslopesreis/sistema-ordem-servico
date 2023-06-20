@@ -18,3 +18,14 @@ INSERT INTO funcionario (id, nome, email, telefone, perfil, login, senha) VALUES
 (2, 'Luan', 'Luan@ifms.edu.br', '1469-7854', 'admin', '145', 'Chapeus de Palhas');
 
 ALTER SEQUENCE funcionario_sequence RESTART WITH 3;
+
+INSERT INTO ordem_servico (id, nome, data_abertura, problema,  prioridade, status, clientes_id) VALUES
+(1, 'Verificar internet', '2023-01-06' , 'internt nao pega', 'ALTA', 'FECHADO',1);
+
+ALTER SEQUENCE ordem_servico_sequence RESTART WITH 2;
+
+INSERT INTO relatorio (id, nome, ordemservico_id, funcionario_id, relatorio) VALUES
+(1, 'Relatorio de ordem de servico || ', 1, 1, 'O problema era causado pelo rompimento de fibra');
+
+ALTER SEQUENCE relatorio_sequence RESTART WITH 2;
+
