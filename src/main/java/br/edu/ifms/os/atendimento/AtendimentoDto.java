@@ -2,16 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.ifms.os.ordem_servico;
+package br.edu.ifms.os.atendimento;
 
 import br.edu.ifms.arch.dto.AdapterBaseObjectDto;
-import br.edu.ifms.os.Cliente.ClienteDto;
+import br.edu.ifms.os.funcionario.Funcionario;
+import br.edu.ifms.os.ordem_servico.OrdemServico;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+
 
 /**
  *
@@ -20,13 +22,11 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-@SuperBuilder
-public class OrdemServicoDto extends AdapterBaseObjectDto{
-
-    private String problema;
-    private String prioridade;
-    private String status;
+@EqualsAndHashCode
+@Builder
+public class AtendimentoDto{
     
-    private String nomeClientes;
+    private String nomeordemservico;
+    private String nomefuncionario;
+    private LocalDate dataAbertura;
 }

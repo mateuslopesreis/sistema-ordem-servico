@@ -19,13 +19,13 @@ INSERT INTO funcionario (id, nome, email, telefone, perfil, login, senha) VALUES
 
 ALTER SEQUENCE funcionario_sequence RESTART WITH 3;
 
-INSERT INTO ordem_servico (id, nome, data_abertura, problema,  prioridade, status, clientes_id) VALUES
-(1, 'Verificar internet', '2023-01-06' , 'internt nao pega', 'ALTA', 'FECHADO',1);
+INSERT INTO ordem_servico (id, nome, problema,  prioridade, status, clientes_id) VALUES
+(1, 'Verificar internet', 'internt nao pega', 'ALTA', 'FECHADO',1);
 
 ALTER SEQUENCE ordem_servico_sequence RESTART WITH 2;
 
-INSERT INTO relatorio (id, nome, ordemservico_id, funcionario_id, relatorio) VALUES
-(1, 'Relatorio de ordem de servico || ', 1, 1, 'O problema era causado pelo rompimento de fibra');
+INSERT INTO atendimento (data_abertura, funcionario_id, ordem_servico_id) VALUES
+('2023-01-06',1,1);
 
-ALTER SEQUENCE relatorio_sequence RESTART WITH 2;
+
 

@@ -30,7 +30,6 @@ import lombok.experimental.SuperBuilder;
 @SequenceGenerator(sequenceName = "ordem_servico_sequence", name = "baseObjectSequence", allocationSize = 1)
 public class OrdemServico extends BaseObject{
     
-    private LocalDate dataAbertura;
     private String problema;
     private String prioridade;
     private String status;
