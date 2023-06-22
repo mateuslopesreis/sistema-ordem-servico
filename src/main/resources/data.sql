@@ -28,4 +28,9 @@ INSERT INTO atendimento (data_abertura, funcionario_id, ordem_servico_id) VALUES
 ('2023-01-06',1,1);
 
 
+ INSERT INTO relatorio_tecnico (id, nome, data_fechamento,  relato, atendimento_funcionario_id, atendimento_ordem_servico_id) VALUES
+ (1, 'Relato ordem de serviço para organizar cabos de rede', '2023-05-06', 'Fora até o local realizar os procedimentos....',1,1);
+ 
+ ALTER SEQUENCE relatorio_tecnico_sequence RESTART WITH 2;
+
 

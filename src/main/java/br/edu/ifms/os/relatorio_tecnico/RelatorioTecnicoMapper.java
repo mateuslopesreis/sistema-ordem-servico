@@ -6,6 +6,7 @@ package br.edu.ifms.os.relatorio_tecnico;
 
 import br.edu.ifms.arch.BaseObjectMapper;
 import br.edu.ifms.arch.ISimpleMapper;
+import br.edu.ifms.os.atendimento.AtendimentoMapper;
 import org.mapstruct.InheritConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -17,7 +18,8 @@ import org.mapstruct.factory.Mappers;
  * @author mateu
  */
 @Mapper(
-        config = BaseObjectMapper.class
+        config = BaseObjectMapper.class,
+        uses = {AtendimentoMapper.class}
 )
 public interface RelatorioTecnicoMapper extends ISimpleMapper<RelatorioTecnico, RelatorioTecnicoDto, RelatorioTecnicoForm> {
     public static final RelatorioTecnicoMapper INSTANCE = Mappers.getMapper(RelatorioTecnicoMapper.class);
@@ -31,4 +33,8 @@ public interface RelatorioTecnicoMapper extends ISimpleMapper<RelatorioTecnico, 
     @Override
     public RelatorioTecnico update(RelatorioTecnicoForm dto, @MappingTarget RelatorioTecnico entity);
 
+     @Mapping(target = "atendimento", ignore = true)
+    @Override
+    public RelatorioTecnico dtoToEntity(RelatorioTecnicoDto dto);
+   
 }
