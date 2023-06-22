@@ -24,7 +24,6 @@ public class FuncionarioForm extends AdapterBaseObjectForm{
     
     private String email;
     private String telefone;
-    private String perfil;
     private String Login;
     private String senha;
 }

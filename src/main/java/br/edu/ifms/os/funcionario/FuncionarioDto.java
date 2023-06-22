@@ -24,7 +24,6 @@ public class FuncionarioDto extends AdapterBaseObjectDto{
     
     private String email;
     private String telefone;
-    private String perfil;
     private String Login;
     private String senha;
 }

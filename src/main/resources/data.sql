@@ -13,9 +13,9 @@ INSERT INTO cliente (id, nome, email, telefone, rua, numero, bairro) VALUES
 
 ALTER SEQUENCE cliente_sequence RESTART WITH 3;
 
-INSERT INTO funcionario (id, nome, email, telefone, perfil, login, senha) VALUES
-(1, 'Mateus', 'mateus@ifms.edu.br', '1469-7854', 'admin' , 'luffy', '123'),
-(2, 'Luan', 'Luan@ifms.edu.br', '1469-7854', 'admin', '145', 'Chapeus de Palhas');
+INSERT INTO funcionario (id, nome, email, telefone, login, senha) VALUES
+(1, 'Mateus', 'mateus@ifms.edu.br', '1469-7854', 'luffy', '123'),
+(2, 'Luan', 'Luan@ifms.edu.br', '1469-7854', '145', 'Chapeus de Palhas');
 
 ALTER SEQUENCE funcionario_sequence RESTART WITH 3;
 
