@@ -20,7 +20,7 @@ INSERT INTO funcionario (id, nome, email, telefone, perfil, login, senha) VALUES
 ALTER SEQUENCE funcionario_sequence RESTART WITH 3;
 
 INSERT INTO ordem_servico (id, nome, problema,  prioridade, status, clientes_id) VALUES
-(1, 'Verificar internet', 'internt nao pega', 'ALTA', 'FECHADO',1);
+(1, 'Verificar internet', 'internt nao pega', 'ALTA', 'ENCERRADO',1);
 
 ALTER SEQUENCE ordem_servico_sequence RESTART WITH 2;
 

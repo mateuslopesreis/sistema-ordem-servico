@@ -26,8 +26,8 @@ import lombok.experimental.SuperBuilder;
 public class OrdemServicoForm extends AdapterBaseObjectForm{
 
     private String problema;
-    private String prioridade;
-    private String status;
+    private Prioridade prioridade;
+    private Status status;
     
     @NotNull
     public ClienteDto clientes;

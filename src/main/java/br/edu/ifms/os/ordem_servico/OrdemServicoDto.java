@@ -25,8 +25,8 @@ import lombok.experimental.SuperBuilder;
 public class OrdemServicoDto extends AdapterBaseObjectDto{
 
     private String problema;
-    private String prioridade;
-    private String status;
+    private Prioridade prioridade;
+    private Status status;
     
     private String nomeClientes;
 }

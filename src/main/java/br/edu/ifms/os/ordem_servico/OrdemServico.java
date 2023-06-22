@@ -6,7 +6,10 @@ package br.edu.ifms.os.ordem_servico;
 
 import br.edu.ifms.arch.BaseObject;
 import br.edu.ifms.os.Cliente.Cliente;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import java.time.LocalDate;
@@ -31,8 +34,14 @@ import lombok.experimental.SuperBuilder;
 public class OrdemServico extends BaseObject{
     
     private String problema;
-    private String prioridade;
-    private String status;
+    
+    @Column(columnDefinition = "varchar(255) not null")
+    @Enumerated(EnumType.STRING)
+    private Prioridade prioridade;
+    
+    @Column(columnDefinition = "varchar(255) not null")
+    @Enumerated(EnumType.STRING)
+    private Status status;
     
      @ManyToOne
     private Cliente clientes;
