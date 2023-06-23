@@ -28,6 +28,6 @@ public class Funcionario extends BaseObject{
     
     private String email;
     private String telefone;
-    private String Login;
+    private String login;
     private String senha;
 }
