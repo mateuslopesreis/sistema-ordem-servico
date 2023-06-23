@@ -32,7 +32,6 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode
 @Builder
 @Entity
-@SequenceGenerator(sequenceName = "atendimento_sequence", name = "baseObjectSequence", allocationSize = 1)
 
 public class Atendimento implements Serializable{
     
