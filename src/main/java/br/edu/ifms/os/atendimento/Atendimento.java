@@ -4,7 +4,6 @@
  */
 package br.edu.ifms.os.atendimento;
 
-import br.edu.ifms.arch.BaseObject;
 import br.edu.ifms.os.funcionario.Funcionario;
 import br.edu.ifms.os.ordem_servico.OrdemServico;
 import jakarta.persistence.Column;
@@ -12,7 +11,6 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.SequenceGenerator;
 import java.io.Serializable;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
@@ -20,7 +18,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
 /**
  *

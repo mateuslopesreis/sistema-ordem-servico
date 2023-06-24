@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.ifms.os.relatorio_tecnico;
+package br.edu.ifms.os.relato_tecnico;
 
 import br.edu.ifms.arch.BaseObject;
 import br.edu.ifms.os.atendimento.Atendimento;
@@ -26,8 +26,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder
 @Entity
-@SequenceGenerator(sequenceName = "relatorio_tecnico_sequence", name = "baseObjectSequence", allocationSize = 1)
-public class RelatorioTecnico extends BaseObject {
+@SequenceGenerator(sequenceName = "relato_tecnico_sequence", name = "baseObjectSequence", allocationSize = 1)
+public class RelatoTecnico extends BaseObject {
     
     private LocalDate dataFechamento;
     private String relato;

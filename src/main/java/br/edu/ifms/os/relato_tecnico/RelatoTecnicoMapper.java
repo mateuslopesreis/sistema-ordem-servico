@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.ifms.os.relatorio_tecnico;
+package br.edu.ifms.os.relato_tecnico;
 
 import br.edu.ifms.arch.BaseObjectMapper;
 import br.edu.ifms.arch.ISimpleMapper;
@@ -21,20 +21,20 @@ import org.mapstruct.factory.Mappers;
         config = BaseObjectMapper.class,
         uses = {AtendimentoMapper.class}
 )
-public interface RelatorioTecnicoMapper extends ISimpleMapper<RelatorioTecnico, RelatorioTecnicoDto, RelatorioTecnicoForm> {
-    public static final RelatorioTecnicoMapper INSTANCE = Mappers.getMapper(RelatorioTecnicoMapper.class);
+public interface RelatoTecnicoMapper extends ISimpleMapper<RelatoTecnico, RelatoTecnicoDto, RelatoTecnicoForm> {
+    public static final RelatoTecnicoMapper INSTANCE = Mappers.getMapper(RelatoTecnicoMapper.class);
 
     @InheritConfiguration(name = "toEntity")
     @Override
-    public RelatorioTecnico formToEntity(RelatorioTecnicoForm dto);
+    public RelatoTecnico formToEntity(RelatoTecnicoForm dto);
     
     @InheritConfiguration(name = "update")
     @Mapping(target = "id", ignore = true)
     @Override
-    public RelatorioTecnico update(RelatorioTecnicoForm dto, @MappingTarget RelatorioTecnico entity);
+    public RelatoTecnico update(RelatoTecnicoForm dto, @MappingTarget RelatoTecnico entity);
 
      @Mapping(target = "atendimento", ignore = true)
     @Override
-    public RelatorioTecnico dtoToEntity(RelatorioTecnicoDto dto);
+    public RelatoTecnico dtoToEntity(RelatoTecnicoDto dto);
    
 }

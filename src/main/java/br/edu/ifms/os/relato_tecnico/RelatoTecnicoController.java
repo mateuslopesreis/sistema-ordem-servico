@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.ifms.os.relatorio_tecnico;
+package br.edu.ifms.os.relato_tecnico;
 
 import br.edu.ifms.arch.controller.AbstractSimpleController;
 import java.net.URI;
@@ -16,19 +16,19 @@ import org.springframework.web.util.UriComponentsBuilder;
  * @author mateu
  */
 @RestController
-@RequestMapping("/api/relatorio-tecnico")
-public class RelatorioTecnicoController extends AbstractSimpleController<RelatorioTecnico, Long, RelatorioTecnicoDto, RelatorioTecnicoForm, RelatorioTecnicoRepository, RelatorioTecnicoService>  {
+@RequestMapping("/api/relato-tecnico")
+public class RelatoTecnicoController extends AbstractSimpleController<RelatoTecnico, Long, RelatoTecnicoDto, RelatoTecnicoForm, RelatoTecnicoRepository, RelatoTecnicoService>  {
     
     @Autowired
     @Override
-    public void setService(RelatorioTecnicoService service) {
+    public void setService(RelatoTecnicoService service) {
         super.service = service;
-        super.setMapper(RelatorioTecnicoMapper.INSTANCE);
+        super.setMapper(RelatoTecnicoMapper.INSTANCE);
     }
 
     @Override
-    public URI createUri(RelatorioTecnico entity, UriComponentsBuilder uriBuilder) {
-        return uriBuilder.path("/api/relatorio-tecnico/{id}")
+    public URI createUri(RelatoTecnico entity, UriComponentsBuilder uriBuilder) {
+        return uriBuilder.path("/api/relato-tecnico/{id}")
                 .buildAndExpand(entity.getId())
                 .toUri();
     }

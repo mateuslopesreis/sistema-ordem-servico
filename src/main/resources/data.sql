@@ -20,17 +20,20 @@ INSERT INTO funcionario (id, nome, email, telefone, login, senha) VALUES
 ALTER SEQUENCE funcionario_sequence RESTART WITH 3;
 
 INSERT INTO ordem_servico (id, nome, problema,  prioridade, status, clientes_id) VALUES
-(1, 'Verificar internet', 'internt nao pega', 'ALTA', 'ENCERRADO',1);
+(1, 'Verificar internet', 'internt nao pega', 'ALTA', 'ENCERRADO',1),
+(2, 'Verificar roteador local', 'sinal ruim', 'MEDIA','ANDAMENTO',1);
 
-ALTER SEQUENCE ordem_servico_sequence RESTART WITH 2;
+ALTER SEQUENCE ordem_servico_sequence RESTART WITH 3;
 
 INSERT INTO atendimento (data_abertura, funcionario_id, ordem_servico_id) VALUES
-('2023-01-06',1,1);
+('2023-01-06',1,1),
+('2023-02-06',2,2),
+('2023-04-09',1,2);
 
 
- INSERT INTO relatorio_tecnico (id, nome, data_fechamento,  relato, atendimento_funcionario_id, atendimento_ordem_servico_id) VALUES
+ INSERT INTO relato_tecnico (id, nome, data_fechamento,  relato, atendimento_funcionario_id, atendimento_ordem_servico_id) VALUES
  (1, 'Relato ordem de serviço para organizar cabos de rede', '2023-05-06', 'Fora até o local realizar os procedimentos....',1,1);
  
- ALTER SEQUENCE relatorio_tecnico_sequence RESTART WITH 2;
+ ALTER SEQUENCE relato_tecnico_sequence RESTART WITH 2;
 
 

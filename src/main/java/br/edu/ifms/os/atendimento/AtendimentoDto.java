@@ -6,7 +6,9 @@ package br.edu.ifms.os.atendimento;
 
 import br.edu.ifms.arch.dto.AdapterBaseObjectDto;
 import br.edu.ifms.os.funcionario.Funcionario;
+import br.edu.ifms.os.funcionario.FuncionarioDto;
 import br.edu.ifms.os.ordem_servico.OrdemServico;
+import br.edu.ifms.os.ordem_servico.OrdemServicoDto;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,7 +28,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class AtendimentoDto{
     
-    private String nomeordemservico;
+    private String nomeordemservico ;
     private String nomefuncionario;
+    private OrdemServicoDto ordemservico;
+    private FuncionarioDto funcionario;
     private LocalDate dataAbertura;
 }

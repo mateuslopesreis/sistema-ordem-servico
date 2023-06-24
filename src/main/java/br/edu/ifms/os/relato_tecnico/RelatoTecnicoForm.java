@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.ifms.os.relatorio_tecnico;
+package br.edu.ifms.os.relato_tecnico;
 
 import br.edu.ifms.arch.dto.AdapterBaseObjectForm;
 import br.edu.ifms.os.atendimento.AtendimentoDto;
@@ -22,7 +22,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class RelatorioTecnicoForm extends AdapterBaseObjectForm {
+public class RelatoTecnicoForm extends AdapterBaseObjectForm {
     private LocalDate dataFechamento;
     private String relato;
     private AtendimentoDto atendimento;
